@@ -13,10 +13,10 @@ def argparsing():
     parser.add_argument('second_file', type=str)
     parser.add_argument('-f', '--format', type=str, metavar='FORMAT')
     args = parser.parse_args()
-    print(generate_diff(args.first_file, args.second_file))
+    print(gener_diff(args.first_file, args.second_file))
 
 
-def generate_diff(filename1, filename2):
+def gener_diff(filename1, filename2):
     js1 = json.load(open(filename1))
     js2 = json.load(open(filename2))
     res = []
