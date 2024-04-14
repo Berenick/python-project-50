@@ -6,3 +6,6 @@ install:
 
 test:
 	poetry run pytest
+
+test-coverage:
+	poetry run pytest --cov
