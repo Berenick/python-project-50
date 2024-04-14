@@ -2,8 +2,8 @@ from gendiff import generate_diff
 from .fixtures import json_res
 
 
-file1 = '/home/nickolay/test_data/file1.json'
-file2 = '/home/nickolay/test_data/file2.json'
+file1 = 'tests/fixtures/file1.json'
+file2 = 'tests/fixtures/file2.json'
 
 def test_diff(json_res):
     print(generate_diff(file1, file2))
