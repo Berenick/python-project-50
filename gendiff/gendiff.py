@@ -27,14 +27,14 @@ def gener_diff(filename1, filename2):
         v2 = js2.get(key)
         if v1 is not None and v2 is not None:
             if js1.get(key) == js2.get(key):
-                res.append(f'  {key} {js1.get(key)}')
+                res.append(f'    {key}: {js1.get(key)}')
             else:
-                res.append(f'- {key} {v1}')
-                res.append(f'+ {key} {v2}')
-        elif v1 is not None and v2 is not None:
-            res.append(f'- {key} {v1}')
+                res.append(f'  - {key}: {v1}')
+                res.append(f'  + {key}: {v2}')
+        elif v1 is not None and v2 is None:
+            res.append(f'  - {key}: {v1}')
         elif v1 is None and v2 is not None:
-            res.append(f'+ {key} {v2}')
+            res.append(f'  + {key}: {v2}')
     a = '\n'.join(res)
     return '{\n' + a + '\n}'
 
