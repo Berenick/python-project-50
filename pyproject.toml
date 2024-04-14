@@ -12,6 +12,10 @@ packages = [
 python = "^3.11"
 
 
+[tool.poetry.group.development.dependencies]
+pytest = "^8.1.1"
+flake8 = "^7.0.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
