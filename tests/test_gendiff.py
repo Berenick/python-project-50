@@ -1,5 +1,5 @@
 from gendiff import generate_diff
-from fixtures.file_fixture import json_res
+from .fixtures import json_res
 
 
 file1 = '/home/nickolay/test_data/file1.json'
