@@ -1,5 +1,7 @@
 from itertools import chain
-import json, yaml
+import json
+import yaml
+
 
 def gener_diff(file1, file2):
     print(f'gener:{file1}')
@@ -25,13 +27,10 @@ def gener_diff(file1, file2):
 
 def make_dict(first_file, second_file):
     file_format = first_file.rsplit('.', 1)
-    if file_format[1] == 'yaml' or file_format[1] =='yml':
-        dict1 = yaml.load(open(first_file), Loader = yaml.FullLoader)
-        dict2 = yaml.load(open(second_file), Loader = yaml.FullLoader)
+    if file_format[1] == 'yaml' or file_format[1] == 'yml':
+        dict1 = yaml.load(open(first_file), Loader=yaml.FullLoader)
+        dict2 = yaml.load(open(second_file), Loader=yaml.FullLoader)
     elif file_format[1] == 'json':
         dict1 = json.load(open(first_file, 'r'))
         dict2 = json.load(open(second_file, 'r'))
     return dict1, dict2
-
-
-    
