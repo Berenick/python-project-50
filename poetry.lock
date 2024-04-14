@@ -110,7 +110,7 @@ files = [
 
 [package.dependencies]
 colorama = {version = "*", markers = "sys_platform == \"win32\""}
-iniconfig  "*"
+iniconfig  = "*"
 pluggy = ">=1.4,<2.0"
 
 [package.extras]
